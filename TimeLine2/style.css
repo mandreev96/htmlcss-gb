@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "helvetica-neue-bold";
+    src: url("fonts/helvetica-neue-bold.ttf");
+}
+
+
+
+.wrapper {
+    margin: 0 auto;
+    width: 1280px;
+    padding: 50px;
+    position: relative;
+    background: url("img/bg.jpg") repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -2;
+}
+
+.wrapper :last-child {
+    margin-bottom: 0;
+}
+
+.verticalLine {
+    border-radius: 1px;
+    background-color: #5e607a;
+    width: 3px;
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+}
+
+.block {
+    margin-bottom: 60px;
+    width: 300px;
+}
+
+.blockWithDate {
+    display: flex;
+    align-items: center;
+}
+
+.blockWithoutDate {
+    display: flex;
+    align-items: center;
+}
+
+.blockLeft {
+    justify-content: flex-start;
+    margin-right: 251px;
+    flex-direction: row-reverse;
+}
+
+.blockRight {
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-left: 251px;
+}
+
+.blockText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+
+.blockWithoutDate.blockRight {
+    margin-left: 284px;
+}
+
+.blockWithoutDate.blockLeft {
+    margin-right: 284px;
+}
+
+.text {
+    padding: 12px;
+    font-family: "helvetica-neue-bold", serif;
+    color: #ffffff;
+    max-width: 184px;
+    font-size: 12px; /* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    text-shadow: 0px -1px 0px rgba(22, 23, 48, 0.5);
+    background-color: pink;
+    text-transform: uppercase;
+}
+
+
+
+.date {
+    border-radius: 50%;
+    background: -webkit-linear-gradient(90deg, #565b78 0%, #737c9c 100%);
+    background: -moz-linear-gradient(90deg, #565b78 0%, #737c9c 100%);
+    background: -o-linear-gradient(90deg, #565b78 0%, #737c9c 100%);
+    background: -ms-linear-gradient(90deg, #565b78 0%, #737c9c 100%);
+    background: linear-gradient(0deg, #565b78 0%, #737c9c 100%);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+    width: 49px;
+    height: 49px;
+    font-family: "helvetica-neue-bold";
+    color: #ffffff;
+    font-size: 12px; /* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    text-align: center;
+    line-height: 49px;
+    text-shadow: 0px -1px 0px rgba(22, 23, 48, 0.5);
+}
+
+.blockWithDate.blockLeft .date {
+    margin-left: 25px;
+}
+
+.blockWithDate.blockRight .date {
+    margin-right: 25px;
+}
+
+
+
+
+
+.corner {
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-left: 14px solid pink;
+    border-bottom: 7px solid transparent;
+    position: absolute;
+}
+
+.blockLeft .blockText .corner {
+    left: 100%;
+}
+
+.blockRight .blockText .corner {
+    transform: rotate(180deg);
+    left: -13px;
+}
+
+.nodate {
+    border-radius: 50%;
+    background: -webkit-linear-gradient(90deg, #565b78 0%, #737c9c 100%);
+    background: -moz-linear-gradient(90deg, #565b78 0%, #737c9c 100%);
+    background: -o-linear-gradient(90deg, #565b78 0%, #737c9c 100%);
+    background: -ms-linear-gradient(90deg, #565b78 0%, #737c9c 100%);
+    background: linear-gradient(0deg, #565b78 0%, #737c9c 100%);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+    width: 16px;
+    height: 16px;
+}
+
+.blockWithoutDate.blockRight .nodate {
+    margin-right: 40px;
+}
+
+.blockWithoutDate.blockLeft .nodate {
+    margin-left: 40px;
+}
+
+body {
+    background-image: url(img/bg.jpg);
+}
